@@ -3,20 +3,9 @@
   "version": "1.0.1",
   "description": "",
   "main": "main.js",
-  "build": {
-    "mac": {
-      "target": ["dmg"]
-    },
-    "win" :{
-      "target" : ["nsis"]
-    },
-    "linux" :{
-      "target" : ["snap","deb"]
-    }
-  },
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder build --mac --win --linux --publish never",
+    "build": "electron-builder build --mac --publish never",
     "deploy": "electron-builder build --mac --publish always"
   },
   "author": "",
