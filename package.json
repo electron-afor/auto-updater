@@ -3,16 +3,27 @@
   "version": "1.0.1",
   "description": "",
   "main": "main.js",
+  "build": {
+    "mac": {
+      "target": ["dmg"]
+    },
+    "win" :{
+      "target" : ["nsis"]
+    },
+    "linux" :{
+      "target" : ["snap","deb"]
+    }
+  },
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder build --mac --publish never",
+    "build": "electron-builder build --mac --win --linux --publish never",
     "deploy": "electron-builder build --mac --publish always"
   },
   "author": "",
   "license": "ISC",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/electron-afor/auto-updater.git"
+    "type": "git",
+    "url": "https://github.com/electron-afor/auto-updater.git"
   },
   "devDependencies": {
     "electron": "^8.2.3",
